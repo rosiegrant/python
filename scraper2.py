@@ -3,14 +3,18 @@ from bs4 import BeautifulSoup
 
 
 def main():
-    url = 'https://jacksonville-fl-5635.theupsstorelocal.com/'
+    url = 'http://theupsstorelocal.com/5635'
     response = requests.get(url)
     html = response.content
-    print(html)
+    # print(html)
 
     soup = BeautifulSoup(html, "html.parser")
-    # print soup.prettify()
-    # secondfooter = soup.find('footerColumn')[1])
+    print(soup.prettify())
+    footer = soup.findAll("div", {"class": "footerColumn"})[
+        1]
+    print(footer)
+
+    # footer = soup.find("footerColumn")[1]
     # for row in table.findAll('tr'):
     # 	for cell in row.findAll('td'):
     # 		print row.prettify()
