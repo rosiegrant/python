@@ -29,6 +29,17 @@ CenterID,CenterURL,Subpage Name,Subpage URL
 6491,http://theupsstorelocal.com/6491,Additional Products & Services,/products--services/additional-products--services
 6491,http://theupsstorelocal.com/6491,Special Offers,/products--services/special-offers
 6491,http://theupsstorelocal.com/6491,Faxing and Scanning,/products--services/faxing-and-scanning
+480,http://theupsstorelocal.com/0480,Products and Services,/products-and-services
+480,http://theupsstorelocal.com/0480,Business Cards,/products-and-services/business-cards
+480,http://theupsstorelocal.com/0480,AU Storage,/products-and-services/au-storage
+480,http://theupsstorelocal.com/0480,Printing,/products-and-services/printing
+480,http://theupsstorelocal.com/0480,Pack & Ship,/products-and-services/pack-ship
+480,http://theupsstorelocal.com/0480,Special Offers,/products-and-services/special-offers
+480,http://theupsstorelocal.com/0480,Additional Products and Services,/products-and-services/additional-products-and-services
+480,http://theupsstorelocal.com/0480,Mailbox Services,/products-and-services/mailbox-services
+480,http://theupsstorelocal.com/0480,Small Business Services,/products-and-services/small-business-services
+480,http://theupsstorelocal.com/0480,Online Printing,/products-and-services/online-printing
+480,http://theupsstorelocal.com/0480,Our Pack and Ship Guarantee,/products-and-services/our-pack-and-ship-guarantee
 3155,http://theupsstorelocal.com/3155,Products & Services,/products-services
 3155,http://theupsstorelocal.com/3155,Business Card Printing,/products-services/business-card-printing
 3155,http://theupsstorelocal.com/3155,Online Printing,/products-services/online-printing
@@ -161,98 +172,3 @@ CenterID,CenterURL,Subpage Name,Subpage URL
 2915,http://theupsstorelocal.com/2915,Small Business Services,/products--services/small-business-services
 2915,http://theupsstorelocal.com/2915,Professional Printing,/products--services/professional-printing
 2915,http://theupsstorelocal.com/2915,Mailbox Services,/products--services/mailbox-services
-2915,http://theupsstorelocal.com/2915,Notary,/products--services/notary
-2915,http://theupsstorelocal.com/2915,Pack & Ship,/products--services/pack--ship
-2915,http://theupsstorelocal.com/2915,Additional Products & Services,/products--services/additional-products--services
-2915,http://theupsstorelocal.com/2915,Special Offers,/products--services/special-offers
-3900,http://theupsstorelocal.com/3900,Products & Services,/products--services
-3900,http://theupsstorelocal.com/3900,WE SHIP NEW MEXICO GREEN CHILE,/products--services/we-ship-new-mexico-green-chile
-3900,http://theupsstorelocal.com/3900,BLACK AND WHITE COPY PRICES,/products--services/black-and-white-copy-prices
-3900,http://theupsstorelocal.com/3900,COLOR COPY PRICES,/products--services/color-copy-prices
-3900,http://theupsstorelocal.com/3900,Mailbox Services,/products--services/mailbox-services
-3900,http://theupsstorelocal.com/3900,SHREDDING SERVICES,/products--services/shredding-services
-3900,http://theupsstorelocal.com/3900,Notary,/products--services/notary
-3900,http://theupsstorelocal.com/3900,Passport Photos,/products--services/passport-photos
-3900,http://theupsstorelocal.com/3900,UNITED STATES POSTAL SERVICES,/products--services/united-states-postal-services
-3900,http://theupsstorelocal.com/3900,DHL Authorized Shipping Center,/products--services/dhl-authorized-shipping-center
-3900,http://theupsstorelocal.com/3900,Our Pack and Ship Guarantee,/products--services/our-pack-and-ship-guarantee
-3900,http://theupsstorelocal.com/3900,WE SHIP FREIGHT AND FURNITURE ,/products--services/we-ship-freight-and-furniture
-3900,http://theupsstorelocal.com/3900,Estate Distribution Shipping Services,/products--services/estate-distribution-shipping-services
-3900,http://theupsstorelocal.com/3900,SMALL OUT OF STATE MOVES,/products--services/small-out-of-state-moves
-3900,http://theupsstorelocal.com/3900,"ALBUQUERQUE AUCTION PICK UP, PACK & SHIP SERVICE",/products--services/albuquerque-auction-pick-up-pack-ship-service
-3900,http://theupsstorelocal.com/3900,Same Day Courier Service,/products--services/same-day-courier-service
-3900,http://theupsstorelocal.com/3900,WE SHIP GOLF CLUBS,/products--services/we-ship-golf-clubs
-3900,http://theupsstorelocal.com/3900,PRIVATE HOUSE CHARGE ACCOUNTS,/products--services/private-house-charge-accounts
-3900,http://theupsstorelocal.com/3900,Pack & Ship,/products--services/pack--ship
-3900,http://theupsstorelocal.com/3900,Special Offers,/products--services/special-offers
-3900,http://theupsstorelocal.com/3900,Additional Products & Services,/products--services/additional-products--services
-3900,http://theupsstorelocal.com/3900,Small Business Services,/products--services/small-business-services
-3900,http://theupsstorelocal.com/3900,Professional Printing,/products--services/professional-printing
-5642,http://theupsstorelocal.com/5642,Products & Services,/products--services
-5642,http://theupsstorelocal.com/5642,Small Business Services,/products--services/small-business-services
-5642,http://theupsstorelocal.com/5642,Professional Printing,/products--services/professional-printing
-5642,http://theupsstorelocal.com/5642,Wedding Print,/products--services/wedding-print
-5642,http://theupsstorelocal.com/5642,Mailbox Services,/products--services/mailbox-services
-5642,http://theupsstorelocal.com/5642,Notary,/products--services/notary
-5642,http://theupsstorelocal.com/5642,Additional Products & Services,/products--services/additional-products--services
-5642,http://theupsstorelocal.com/5642,Special Offers,/products--services/special-offers
-5642,http://theupsstorelocal.com/5642,Pack & Ship,/products--services/pack--ship
-5642,http://theupsstorelocal.com/5642,3D Printing,/products--services/3d-printing
-5642,http://theupsstorelocal.com/5642,Fingerprinting,/products--services/fingerprinting
-1156,http://theupsstorelocal.com/1156,Products & Services,/products--services
-1156,http://theupsstorelocal.com/1156,Small Business Services,/products--services/small-business-services
-1156,http://theupsstorelocal.com/1156,Professional Printing,/products--services/professional-printing
-1156,http://theupsstorelocal.com/1156,Mailbox Services,/products--services/mailbox-services
-1156,http://theupsstorelocal.com/1156,Notary,/products--services/notary
-1156,http://theupsstorelocal.com/1156,Pack & Ship,/products--services/pack--ship
-1156,http://theupsstorelocal.com/1156,Additional Products & Services,/products--services/additional-products--services
-1156,http://theupsstorelocal.com/1156,Special Offers,/products--services/special-offers
-3771,http://theupsstorelocal.com/3771,Products & Services,/products--services
-3771,http://theupsstorelocal.com/3771,Small Business Services,/products--services/small-business-services
-3771,http://theupsstorelocal.com/3771,Professional Printing,/products--services/professional-printing
-3771,http://theupsstorelocal.com/3771,Mailbox Services,/products--services/mailbox-services
-3771,http://theupsstorelocal.com/3771,Notary,/products--services/notary
-3771,http://theupsstorelocal.com/3771,Pack & Ship,/products--services/pack--ship
-3771,http://theupsstorelocal.com/3771,Passport Photos,/products--services/passport-photos
-3771,http://theupsstorelocal.com/3771,Additional Products & Services,/products--services/additional-products--services
-3771,http://theupsstorelocal.com/3771,Special Offers,/products--services/special-offers
-3771,http://theupsstorelocal.com/3771,Fingerprinting,/products--services/fingerprinting
-3771,http://theupsstorelocal.com/3771,Shredding,/products--services/shredding
-5384,http://theupsstorelocal.com/5384,Products & Services,/products--services
-5384,http://theupsstorelocal.com/5384,Mailbox Services,/products--services/mailbox-services
-5384,http://theupsstorelocal.com/5384,Notary,/products--services/notary
-5384,http://theupsstorelocal.com/5384,"Shipping, Freight & Packing",/products--services/shipping-freight-packing
-5384,http://theupsstorelocal.com/5384,Professional Printing,/products--services/professional-printing
-5384,http://theupsstorelocal.com/5384,Shredding Services ,/products--services/shredding-services
-5384,http://theupsstorelocal.com/5384,Small Business Services,/products--services/small-business-services
-5384,http://theupsstorelocal.com/5384,Special Offers,/products--services/special-offers
-5384,http://theupsstorelocal.com/5384,"Fax, Scan & Office/Mailing Supplies",/products--services/fax-scan-office-mailing-supplies
-5384,http://theupsstorelocal.com/5384,Comcast Xfinity Returns,/products--services/comcast-xfinity-returns
-6279,http://theupsstorelocal.com/6279,Products & Services,/products--services
-6279,http://theupsstorelocal.com/6279,Small Business Services,/products--services/small-business-services
-6279,http://theupsstorelocal.com/6279,Professional Printing,/products--services/professional-printing
-6279,http://theupsstorelocal.com/6279,Mailbox Services,/products--services/mailbox-services
-6279,http://theupsstorelocal.com/6279,Notary,/products--services/notary
-6279,http://theupsstorelocal.com/6279,Pack & Ship,/products--services/pack--ship
-6279,http://theupsstorelocal.com/6279,Additional Products & Services,/products--services/additional-products--services
-6279,http://theupsstorelocal.com/6279,Special Offers,/products--services/special-offers
-6279,http://theupsstorelocal.com/6279,Self-Serve Printing with FotoZoomer,/products--services/self-serve-printing-with-fotozoomer
-6479,http://theupsstorelocal.com/6479,Products & Services,/products--services
-6479,http://theupsstorelocal.com/6479,Small Business Services,/products--services/small-business-services
-6479,http://theupsstorelocal.com/6479,Professional Printing,/products--services/professional-printing
-6479,http://theupsstorelocal.com/6479,Mailbox Services,/products--services/mailbox-services
-6479,http://theupsstorelocal.com/6479,Notary,/products--services/notary
-6479,http://theupsstorelocal.com/6479,Shredding,/products--services/shredding
-6479,http://theupsstorelocal.com/6479,Pack & Ship,/products--services/pack--ship
-6479,http://theupsstorelocal.com/6479,Additional Products & Services,/products--services/additional-products--services
-6479,http://theupsstorelocal.com/6479,Special Offers,/products--services/special-offers
-6479,http://theupsstorelocal.com/6479,Convention Services,/products--services/convention-services
-6593,http://theupsstorelocal.com/6593,Products & Services,/products--services
-6593,http://theupsstorelocal.com/6593,Baylor Summer Storage & Shipping,/products--services/baylor-summer-storage-shipping
-6593,http://theupsstorelocal.com/6593,Small Business Services,/products--services/small-business-services
-6593,http://theupsstorelocal.com/6593,Professional Printing,/products--services/professional-printing
-6593,http://theupsstorelocal.com/6593,Mailbox Services,/products--services/mailbox-services
-6593,http://theupsstorelocal.com/6593,Notary,/products--services/notary
-6593,http://theupsstorelocal.com/6593,Pack & Ship,/products--services/pack--ship
-6593,http://theupsstorelocal.com/6593,Additional Products & Services,/products--services/additional-products--services
-1841,http://theupsstorelocal.com/1841,Products & Services,/products--services

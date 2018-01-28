@@ -42,21 +42,13 @@ def soupStuff(centerID, pageURL):
               centerID)  # this store doesn't match the pattern
 
     prodservColumn = footerColumns[1]
-    prodservItems = prodservColumn.find_all(
-        'h4')
-    # print(prodservItems)
-    # prodservItem = prodservItems.find(
-    #     "a", string="Products &amp; Services")
+    prodservItem = prodservColumn.find_all(
+        'h4')[0]
 
-    # if (len(prodservItem) < 1):
-    #     print("Whoops! Store ", centerID,
-    #           "doesn't have product and services where we expected it. Skipping this store.")
-    #     return {}
-
-    prodservItem = prodservItems[0]
-    if (prodservItem.a.contents[0] not in "Products & Services"):
+    if ("Products" not in prodservItem.a.contents[0]):
         print("Whoops! Store ", centerID,
               "doesn't have product and services where we expected it. Skipping this store.")
+        print(prodservItem.a.contents[0])
         return {}
 
     allRows = []
