@@ -1,11 +1,18 @@
 import csv
 import requests
 from bs4 import BeautifulSoup
+import sys
 
 
 def main():
     url = 'http://theupsstorelocal.com/5635'
-    response = requests.get(url)
+
+    for line in open(sys.argv[1]):
+        row = line.split(',')  # returns a list ["1","50","60"]
+        CenterID = row[0]
+        pageURL = row[1]
+
+    response = requests.get(pageURL)
     html = response.content
     # print(html)
 
@@ -28,14 +35,15 @@ def main():
         this_row = []
         this_row.append(listItem.a.contents[0])
         this_row.append(listItem.a.get('href'))
-        print("an item", listItem.a.get('href'))
-        print("an item", listItem.a.contents[0])
+        # print("an item", listItem.a.get('href'))
+        # print("an item", listItem.a.contents[0])
         all_rows.append(this_row)
 
     outfile = open("./upslinks.csv", "w")
     writer = csv.writer(outfile)
     writer.writerow(["CenterID", "CenterURL", "Subpage Name", "Subpage URL"])
     writer.writerows(all_rows)
+
 
 if __name__ == "__main__":
     main()
