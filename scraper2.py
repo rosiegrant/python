@@ -36,13 +36,28 @@ def soupStuff(centerID, pageURL):
     html = response.content
     soup = BeautifulSoup(html, "html.parser")
     # print(soup.prettify())
-    fooferColumns = soup.findAll("div", {"class": "footerColumn"})
-    if (len(fooferColumns) > 3):
+    footerColumns = soup.findAll("div", {"class": "footerColumn"})
+    if (len(footerColumns) > 3):
         print("Number of footer elements higher than expected for store ",
               centerID)  # this store doesn't match the pattern
-    prodservColumn = fooferColumns[1]
 
-    prodservItem = prodservColumn.findAll('h4')[0]
+    prodservColumn = footerColumns[1]
+    prodservItems = prodservColumn.find_all(
+        'h4')
+    # print(prodservItems)
+    # prodservItem = prodservItems.find(
+    #     "a", string="Products &amp; Services")
+
+    # if (len(prodservItem) < 1):
+    #     print("Whoops! Store ", centerID,
+    #           "doesn't have product and services where we expected it. Skipping this store.")
+    #     return {}
+
+    prodservItem = prodservItems[0]
+    if (prodservItem.a.contents[0] not in "Products & Services"):
+        print("Whoops! Store ", centerID,
+              "doesn't have product and services where we expected it. Skipping this store.")
+        return {}
 
     allRows = []
     firstRow = []
