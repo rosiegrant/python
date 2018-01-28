@@ -24,8 +24,8 @@ def main():
 
         print("processing store ", centerID)
 
-        all_rows = soupStuff(centerID, pageURL)  # do the beautiful soup things
-        writer.writerows(all_rows)  # write data to outfile
+        allRows = soupStuff(centerID, pageURL)  # do the beautiful soup things
+        writer.writerows(allRows)  # write data to outfile
 
     outfile.close()
 
@@ -36,29 +36,29 @@ def soupStuff(centerID, pageURL):
     html = response.content
     soup = BeautifulSoup(html, "html.parser")
     # print(soup.prettify())
-    footerA = soup.findAll("div", {"class": "footerColumn"})
-    if (len(footerA) > 3):
+    fooferColumns = soup.findAll("div", {"class": "footerColumn"})
+    if (len(fooferColumns) > 3):
         print("Number of footer elements higher than expected for store ",
               centerID)  # this store doesn't match the pattern
-    footer = footerA[1]
+    prodservColumn = fooferColumns[1]
 
-    prod_services = footer.findAll('h4')[0]
+    prodservItem = prodservColumn.findAll('h4')[0]
 
-    all_rows = []
-    first_row = []
-    first_row.append(centerID), first_row.append(pageURL)
-    first_row.append(prod_services.a.contents[0]), first_row.append(
-        prod_services.a.get('href'))
-    all_rows.append(first_row)  # well this is dumb
+    allRows = []
+    firstRow = []
+    firstRow.append(centerID), firstRow.append(pageURL)
+    firstRow.append(prodservItem.a.contents[0]), firstRow.append(
+        prodservItem.a.get('href'))
+    allRows.append(firstRow)  # well this is dumb
 
-    for listItem in footer.findAll('li'):
-        this_row = []
-        this_row.append(centerID), this_row.append(pageURL)
-        this_row.append(listItem.a.contents[0])  # subpage name
-        this_row.append(listItem.a.get('href'))  # subpage URL
-        all_rows.append(this_row)
+    for listItem in prodservColumn.findAll('li'):
+        thisRow = []
+        thisRow.append(centerID), thisRow.append(pageURL)
+        thisRow.append(listItem.a.contents[0])  # subpage name
+        thisRow.append(listItem.a.get('href'))  # subpage URL
+        allRows.append(thisRow)
 
-    return all_rows
+    return allRows
 
 
 if __name__ == "__main__":
