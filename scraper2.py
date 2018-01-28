@@ -18,12 +18,13 @@ def main():
     # print(prodAndServ)
 
     for listItem in footer.findAll('li'):
-        # print("an item", listItem)
-        try:
-            for link in listItem.findall('a'):
-                print(link)[0]
-        except:
-            print("error")
+        print("an item", listItem.a.get('href'))
+        print("an item", listItem.a.contents[0])
+        # try:
+        #     for link in listItem.findall('a'):
+        #         print(link)[0]
+        # except:
+        #     print("error")
 
     # 	for  in row.findAll('td'):
     # 		print row.prettify()
