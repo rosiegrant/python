@@ -9,14 +9,23 @@ def main():
     # print(html)
 
     soup = BeautifulSoup(html, "html.parser")
-    print(soup.prettify())
+    # print(soup.prettify())
     footer = soup.findAll("div", {"class": "footerColumn"})[
         1]
-    print(footer)
+    # print(footer)
 
-    # footer = soup.find("footerColumn")[1]
-    # for row in table.findAll('tr'):
-    # 	for cell in row.findAll('td'):
+    prodAndServ = footer.findAll('h4')[0]
+    # print(prodAndServ)
+
+    for listItem in footer.findAll('li'):
+        # print("an item", listItem)
+        try:
+            for link in listItem.findall('a'):
+                print(link)[0]
+        except:
+            print("error")
+
+    # 	for  in row.findAll('td'):
     # 		print row.prettify()
 
     # outfile = open("./upslinks.csv", "wb")
