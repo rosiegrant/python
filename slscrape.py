@@ -6,7 +6,7 @@ import sys
 
 def main():
 
-    # prepare output file
+    # Prepare output file
     outfile = open("./slscrape.csv", "w")
     writer = csv.writer(outfile)
     writer.writerow(
@@ -14,9 +14,9 @@ def main():
         	"About Description 1", "About Header 2", "About Description 2", "About Header 3", "About Description 3", 
         	"About Header 4", "About Description 4", "About Header 5", "About Description 5"])  # Add headers to output file
 
-    # iterate through URLs, from file that's taken in via the command line, first argument
+    # Iterate through URLs, from file that's taken in via the command line, first argument
     infile = open(sys.argv[1])
-    infile.readline()  # throw out the first line with headers
+    infile.readline()  # Throw out the first line with headers
 
     for line in infile:
 
@@ -26,22 +26,25 @@ def main():
         print("processing store ", entityId)
         writer.writerow(soupStuff(entityId, pageURL))
 
-
-       # allRows = soupStuff(entityId, pageURL)  # do the beautiful soup things
-       # writer.writerows(allRows)  # write data to outfile
-
-    # writer.writerow(soupStuff("1234", "http://www.seniorlifestyle.com/property/morningside-house-leesburg/"))
+    # for testing a single URL:
+    # writer.writerow(soupStuff("1234", "http://www.cadenceattheglenva.com/"))
     outfile.close()
 
 
 def soupStuff(entityId, pageURL):
 
+    # Assemble the row that will be added to the output file
+    thisRow = [] 
+    thisRow.append(entityId), thisRow.append(pageURL)
+
+    # Get the page
     response = requests.get(pageURL)
+    if response.status_code is not 200:
+    	thisRow.append("Unable to reach site, status code is not 200")
+    	return thisRow
+
     html = response.content
     soup = BeautifulSoup(html, "html.parser")
-
-    thisRow = [] # Start assembling the row that will be added to the output file
-    thisRow.append(entityId), thisRow.append(pageURL)
 
     # Get Business Name and Phone Number
     span9 = soup.findAll("div", {"class": "span9"}) # find all divs who have the span9 class
@@ -73,21 +76,20 @@ def soupStuff(entityId, pageURL):
 
     # Get About Main Title
     about = soup.find(itemtype="http://schema.org/Organization", id="about")
-    mainTitle = about.h1.text
-    thisRow.append(mainTitle)
+    mainTitle = about.h1
+    if mainTitle: thisRow.append(mainTitle.text)
+    else: thisRow.append(" ") #no title found
 
 
-    # Content
+    # Get Content
     h4s = about.findAll('h4')
     for header in h4s:
     	sib = header.find_next_sibling()
     	thisRow.append(header.text) # About Header n
-    	pcount = 0;
     	content = ""
     	while sib and sib.name == 'p': # Get all <p>s that are adjacent to the current <h4>
     		content = content + " " + sib.text # Append all <p>s together
     		sib = sib.find_next_sibling()
-    		pcount+=1
     	thisRow.append(content)
 
     # print(thisRow)
@@ -95,36 +97,5 @@ def soupStuff(entityId, pageURL):
     return(thisRow)
 
 
-
-
-    # services = soup.find(text='providing').findNext('ul').li
-    # services = soup.find(text='providing').findAll('ul').li
-    # prodservColumn = footerColumns[1]
-    # prodservItem = prodservColumn.find_all(
-    #     'h4')[0]
-
-    # if ("Products" not in prodservItem.a.contents[0]):
-    #     print("Whoops! Store ", entityId,
-    #           "doesn't have product and services where we expected it. Skipping this store.")
-    #     print(prodservItem.a.contents[0])
-    #     return {}
-
-    # allRows = []
-    # firstRow = []
-    # firstRow.append(entityId), firstRow.append(pageURL)
-    # firstRow.append(prodservItem.a.contents[0]), firstRow.append(
-    #     prodservItem.a.get('href'))
-    # allRows.append(firstRow)  # well this is dumb
-
-    # for listItem in prodservColumn.findAll('li'):
-    #     thisRow = []
-    #     thisRow.append(entityId), thisRow.append(pageURL)
-    #     thisRow.append(listItem.a.contents[0])  # subpage name
-    #     thisRow.append(listItem.a.get('href'))  # subpage URL
-    #     allRows.append(thisRow)
-
-    # return allRows
-
-
 if __name__ == "__main__":
-    main()  # do it
+    main()  # booyah
