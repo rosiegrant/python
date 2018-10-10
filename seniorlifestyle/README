@@ -1,0 +1,5 @@
+Input file sl.csv lists all SL locations by entity ID and URL. Most recent output is stored in slscrape.csv.
+
+
+To run: python3 slscrape.py [input.csv] [desired output.csv]
+Example: python3 slscrape.py sl.csv output.csv
