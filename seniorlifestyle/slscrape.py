@@ -8,7 +8,7 @@ def main():
 
     # Prepare output file
     # outfile = open("./slscrape.csv", "w")
-    outfile = open(sys.argv[2], "w")
+    outfile = open(sys.argv[2], "w", encoding='utf-8-sig')
     writer = csv.writer(outfile)
     writer.writerow(
         ["Entity ID", "Client URL", "Business Name", "Phone","Rate","Services", "About Main Title", "About Header 1", 
@@ -28,7 +28,7 @@ def main():
         writer.writerow(soupStuff(entityId, pageURL))
 
     # for testing a single URL:
-    # writer.writerow(soupStuff("1234", "http://www.cadenceattheglenva.com/"))
+    # writer.writerow(soupStuff("1234", "http://www.seniorlifestyle.com/property/seasons/"))
     outfile.close()
 
 
