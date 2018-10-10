@@ -7,7 +7,8 @@ import sys
 def main():
 
     # Prepare output file
-    outfile = open("./slscrape.csv", "w")
+    # outfile = open("./slscrape.csv", "w")
+    outfile = open(sys.argv[2], "w")
     writer = csv.writer(outfile)
     writer.writerow(
         ["Entity ID", "Client URL", "Business Name", "Phone","Rate","Services", "About Main Title", "About Header 1", 
